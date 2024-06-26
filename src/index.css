@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --label-color: #FFF;
+  --label-error: #E63935;
+  --vector-active: #2271D1;
+}
