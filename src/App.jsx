@@ -1,10 +1,11 @@
 import React from 'react';
 import { Footer } from './components/Footer/Footer';
+import { Header } from './components/Header/Header';
 
 function App() {
   return (
     <React.Fragment>
-      <h1>Hello World</h1>
+      <Header/>
       <Footer/>
     </React.Fragment>
   )
