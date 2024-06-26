@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,27 @@
 }
 
 :root {
+  /*Fontes */
+  --fonte-primary: 'Roboto', sans-serif;
+  --fonte-inputs: 'Source Sans 3', sans-serif;
+
+  /* Cores que compõe o componente */
+  --dark-grey: #262626;
+  --light-gray: #A5A5A5;
   --label-color: #FFF;
   --label-error: #E63935;
-  --vector-active: #2271D1;
+  --color-blue: #2271D1;
+  --color-backend: #00C86F;
+  --color-frontend: #6BD1FF;
+  --color-mobile-gestao: #FFBA05;
+
+  /* Banner */
+  --banner-pass-through-effect: rgba(0, 18, 51, 56%);
+  
+  /* Background e Efeitos */
+  --background-dark-90: rgba(0, 0, 0, 90%);
+  --background-modal-dark-blue: #03122F;
+  --modal-pass-through-effect: rgba(3, 18, 48, 76%);
+
+  --box-shadow-blue-70: rgba(34, 113, 209, 0.70);
 }
