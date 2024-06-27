@@ -1,0 +1,22 @@
+.BannerCard {
+  width: 296.82px;
+  height: 92px;
+  position: relative;
+  border-radius: 15px;
+}
+
+.BannerContent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 48px;
+  font-family: Roboto;
+  font-weight: 800;
+  word-wrap: break-word;
+}
