@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import CardButton from '../Buttons/CardButton/CardButton';
 import vectorEditar from '../../assets/vectors/edit.svg';
@@ -55,15 +55,16 @@ export const VideoCard = ({ videoId }) => {
         try {
             await VideoService.delete(videoId);
             console.log(`Vídeo ${videoId} deletado com sucesso!`);
-            setShowConfirmModal(false); // Close the modal after deletion
+            setShowConfirmModal(false);
+            window.location.reload();
         } catch (error) {
             console.error('Erro ao deletar vídeo:', error);
         }
     };
 
     return (
-        <div className="video-card" style={{ boxShadow: `0px 0px 17px 8px ${boxShadowColor}` }}>
-            <div className="edit-delete" style={{ boxShadow: `0px 0px 17px 4px ${boxShadowColor}` }}>
+        <div className="video-card" style={{ boxShadow: `0px 0px 17px 8px ${boxShadowColor} inset` }}>
+            <div className="edit-delete" style={{ boxShadow: `0px 0px 17px 4px ${boxShadowColor} inset` }}>
                 <div className="button-container">
                     <CardButton label="Editar" vectorUrl={vectorEditar} onClick={editar} />
                     <CardButton label="Apagar" vectorUrl={vectorDeletar} onClick={() => setShowConfirmModal(true)} />
@@ -72,6 +73,8 @@ export const VideoCard = ({ videoId }) => {
             <img className="video-thumbnail" src={imageUrl} alt="Thumbnail do vídeo" />
             
             {showConfirmModal && (
+                <React.Fragment>
+                <div className='overlay'></div>
                 <div className="confirm-modal">
                     <div className="confirm-modal-content">
                         <p>Você realmente quer deletar o vídeo?</p>
@@ -81,6 +84,7 @@ export const VideoCard = ({ videoId }) => {
                         </div>
                     </div>
                 </div>
+                </React.Fragment>
             )}
         </div>
     );

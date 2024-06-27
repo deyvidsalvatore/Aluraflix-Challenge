@@ -45,8 +45,8 @@ export const FormNovoVideo = () => {
       const videoData = {
         titulo: form.titulo.value,
         categoria: form.categoria.value,
-        imagem: form.imagem.value,
-        video: form.video.value,
+        imagemUrl: form.imagem.value,
+        videoUrl: form.video.value,
         descricao: form.descricao.value,
       };
 

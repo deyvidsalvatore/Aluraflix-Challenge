@@ -1,11 +1,22 @@
 import axios from 'axios';
 
 const API_URL = 'http://localhost:3000/videos';
+const RENDER_URL = 'https://deyvidsalvatore-aluraflix-back-2134.onrender.com/videos';
+
+const getActiveUrl = async () => {
+  try {
+    await axios.get(RENDER_URL);
+    return RENDER_URL;
+  } catch (error) {
+    return API_URL;
+  }
+};
 
 const VideoService = {
   getAll: async () => {
+    const url = await getActiveUrl();
     try {
-      const response = await axios.get(API_URL);
+      const response = await axios.get(url);
       return response.data;
     } catch (error) {
       console.error('Error while fetching videos:', error);
@@ -14,8 +25,9 @@ const VideoService = {
   },
 
   get: async (id) => {
+    const url = await getActiveUrl();
     try {
-      const response = await axios.get(`${API_URL}/${id}`);
+      const response = await axios.get(`${url}/${id}`);
       return response.data;
     } catch (error) {
       console.error(`Error while fetching video ${id}:`, error);
@@ -24,8 +36,9 @@ const VideoService = {
   },
 
   create: async (videoData) => {
+    const url = await getActiveUrl();
     try {
-      const response = await axios.post(API_URL, videoData);
+      const response = await axios.post(url, videoData);
       return response.data;
     } catch (error) {
       console.error('Error while creating video:', error);
@@ -34,8 +47,9 @@ const VideoService = {
   },
 
   update: async (id, videoData) => {
+    const url = await getActiveUrl();
     try {
-      const response = await axios.put(`${API_URL}/${id}`, videoData);
+      const response = await axios.put(`${url}/${id}`, videoData);
       return response.data;
     } catch (error) {
       console.error(`Error while updating video ${id}:`, error);
@@ -44,8 +58,9 @@ const VideoService = {
   },
 
   delete: async (id) => {
+    const url = await getActiveUrl();
     try {
-      const response = await axios.delete(`${API_URL}/${id}`);
+      const response = await axios.delete(`${url}/${id}`);
       return response.data;
     } catch (error) {
       console.error(`Error while deleting video ${id}:`, error);

@@ -1,0 +1,50 @@
+.secao-de-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+  background-color: var(--background-dark-90);
+}
+
+.categoria-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+.cards-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.cards-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+.cards-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.categoria-cards h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.video-card {
+  flex: 0 0 48%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .video-card {
+    flex: 0 0 100%;
+  }
+}
