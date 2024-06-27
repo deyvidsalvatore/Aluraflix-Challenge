@@ -46,3 +46,5 @@ export const MainBanner = () => {
     </div>
   );
 };
+
+export default MainBanner;

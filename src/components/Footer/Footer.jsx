@@ -1,5 +1,6 @@
 import aluraFlixLogo from '../../assets/logo/aluraflix.png';
 import './Footer.css';
+
 export const Footer = () => {
     return (
         <footer>
@@ -12,3 +13,5 @@ export const Footer = () => {
 
     );
 };
+
+export default Footer;

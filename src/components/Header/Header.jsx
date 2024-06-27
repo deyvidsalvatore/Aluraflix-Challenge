@@ -1,13 +1,28 @@
 import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import aluraFlixLogo from '../../assets/logo/aluraflix.png';
 import BannerButton from '../Buttons/BannerButton/BannerButton';
 import './Header.css';
 
 export const Header = () => {
-    const [activeButton, setActiveButton] = useState('home');
+    const navigate = useNavigate();
+    const location = useLocation();
+    
+    const getActiveButton = () => {
+        if (location.pathname === '/novo-video') {
+            return 'novo vídeo';
+        } else {
+            return 'home';
+        }
+    };
 
-    const handleClick = (label) => {
-        setActiveButton(label);
+    const [activeButton, setActiveButton] = useState(getActiveButton());
+
+    const handleClick = (label, path) => {
+        if (activeButton !== label) {
+            setActiveButton(label);
+            navigate(path);
+        }
     };
 
     return (
@@ -21,15 +36,17 @@ export const Header = () => {
                     <BannerButton
                         label="home"
                         isActive={activeButton === 'home'}
-                        onClick={handleClick}
+                        onClick={() => handleClick('home', '/')}
                     />
                     <BannerButton
                         label="novo vídeo"
                         isActive={activeButton === 'novo vídeo'}
-                        onClick={handleClick}
+                        onClick={() => handleClick('novo vídeo', '/novo-video')}
                     />
                 </div>
             </div>
         </header>
     );
 };
+
+export default Header;

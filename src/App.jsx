@@ -1,11 +1,15 @@
-import React from 'react';
-import { NovoVideo } from './pages/novo-video/NovoVideo';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/home/HomePage';
+import NovoVideo from './pages/novo-video/NovoVideo';
 
 function App() {
   return (
-    <React.Fragment>
-      <NovoVideo />
-    </React.Fragment>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/novo-video" element={<NovoVideo />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
