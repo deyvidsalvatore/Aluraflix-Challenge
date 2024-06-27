@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import axios from 'axios';
 import './FormNovoVideo.css';
+import VideoService from '../../../services/VideoService';
 
 export const FormNovoVideo = () => {
   const [errors, setErrors] = useState({});
@@ -53,8 +53,8 @@ export const FormNovoVideo = () => {
       setIsLoading(true);
 
       try {
-        const response = await axios.post('https://deyvidsalvatore-aluraflix-back-2134.onrender.com/videos', videoData);
-        console.log('Response:', response.data);
+        const createdVideo = await VideoService.create(videoData);
+        console.log('Video criado:', createdVideo);
         handleClear(form);
       } catch (error) {
         console.error('Error:', error);
