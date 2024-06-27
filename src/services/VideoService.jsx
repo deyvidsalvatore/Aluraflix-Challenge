@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'https://deyvidsalvatore-aluraflix-back-2134.onrender.com/videos';
+const API_URL = 'http://localhost:3000/videos';
 
 const VideoService = {
   getAll: async () => {
