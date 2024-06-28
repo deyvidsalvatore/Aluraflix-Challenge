@@ -6,10 +6,7 @@ import vectorDeletar from '../../assets/vectors/delete.svg';
 import './VideoCard.css';
 import VideoService from '../../services/VideoService';
 import VideoViewModal from '../VideoViewModal/VideoViewModal';
-
-const editar = () => {
-    console.log('Editar vídeo');
-};
+import ModalEditarForm from '../Formularios/ModalEditarForm/ModalEditarForm';
 
 const getCategoryColor = (category) => {
     switch (category.toLowerCase()) {
@@ -32,6 +29,7 @@ export const VideoCard = ({ videoId }) => {
     const [boxShadowColor, setBoxShadowColor] = useState("#6BD1FF");
     const [showConfirmModal, setShowConfirmModal] = useState(false);
     const [showVideoModal, setShowVideoModal] = useState(false);
+    const [showEditModal, setShowEditModal] = useState(false);
 
     useEffect(() => {
         const fetchVideoThumbnail = async () => {
@@ -86,16 +84,24 @@ export const VideoCard = ({ videoId }) => {
         return videoId;
     };
 
+    const editarVideo = () => {
+        setShowEditModal(true);
+    };
+
+    const handleEditModalClose = () => {
+        setShowEditModal(false);
+    };
+
     return (
         <div className="video-card" style={{ boxShadow: `0px 0px 17px 8px ${boxShadowColor} inset` }}>
             <div className="edit-delete" style={{ boxShadow: `0px 0px 17px 4px ${boxShadowColor} inset` }}>
                 <div className="button-container">
-                    <CardButton label="Editar" vectorUrl={vectorEditar} onClick={editar} />
+                    <CardButton label="Editar" vectorUrl={vectorEditar} onClick={editarVideo} />
                     <CardButton label="Apagar" vectorUrl={vectorDeletar} onClick={() => setShowConfirmModal(true)} />
                 </div>
             </div>
             <img className="video-thumbnail" src={imageUrl} alt="Thumbnail do vídeo" onClick={openVideoModal} />
-            
+
             {showConfirmModal && (
                 <React.Fragment>
                     <div className='overlay'></div>
@@ -114,6 +120,16 @@ export const VideoCard = ({ videoId }) => {
             {showVideoModal && (
                 <VideoViewModal videoUrl={videoUrl} onClose={closeVideoModal} />
             )}
+
+            {showEditModal && (
+                <div className="overlay">
+                    <div className="edit-modal">
+                        <div className="edit-modal-content">
+                            <ModalEditarForm videoId={videoId} onClose={handleEditModalClose}/>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
@@ -123,3 +139,4 @@ VideoCard.propTypes = {
 };
 
 export default VideoCard;
+
