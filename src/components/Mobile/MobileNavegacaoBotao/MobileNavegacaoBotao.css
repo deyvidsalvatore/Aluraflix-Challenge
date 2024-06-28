@@ -1,0 +1,26 @@
+.mobile-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mobile-button-container.active {
+  background: rgba(3, 16, 39, 0.24);
+  border: 2px solid #2271d1;
+  border-radius: 15px;
+}
+
+.button-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
+}
+
+.button-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffba05;
+  font-family: var(--fonte-inputs);
+}

@@ -91,3 +91,9 @@
   line-height: 1.5;
   text-align: justify;
 }
+
+@media (max-width: 767px) {
+  .banner {
+    display: none;
+  }
+}
