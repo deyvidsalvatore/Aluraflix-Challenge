@@ -1,0 +1,100 @@
+{
+    "videos": [
+        {
+            "id": 1,
+            "titulo": "O que faz uma desenvolvedora Front-end",
+            "categoria": "frontend",
+            "imagemUrl": "https://i3.ytimg.com/vi/ZY3-MFxVdEw/maxresdefault.jpg",
+            "videoUrl": "https://youtu.be/ZY3-MFxVdEw",
+            "descricao": "O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa nesse episódio!"
+        },
+        {
+            "id": 2,
+            "titulo": "Guia de carreira Front-end",
+            "categoria": "frontend",
+            "imagemUrl": "http://i3.ytimg.com/vi/fpth65ts3cw/hqdefault.jpg",
+            "videoUrl": "https://youtu.be/fpth65ts3cw",
+            "descricao": "Nesse primeiro episódio, confira o que é front-end e como seguir nessa área da tecnologia, através do Tech Guide front-end, um Guia de Estudos do iniciante ao avançado. São 3 níveis de Profundidade e 1 nível de Expansão, formando seu perfil como Dev Front-End em T."
+        },
+        {
+            "id": 3,
+            "titulo": "Como APRENDER um FRAMEWORK Front End?",
+            "categoria": "frontend",
+            "imagemUrl": "https://i3.ytimg.com/vi/mMMqMk2buzs/maxresdefault.jpg",
+            "videoUrl": "https://youtu.be/mMMqMk2buzs",
+            "descricao":"Nesse vídeo quero contar pra vocês um pouco de como foi o meu processo pra aprender angular e de quebra tentar ensinar vocês também como aprender uma tecnologia nova, são algumas dicas que me ajudaram muuuito ao longo dos anos e espero que ajude vocês também!"
+        },
+        {
+            "id": 4,
+            "titulo": "Angular vs React vs Vue - Qual deles é o melhor?",
+            "categoria": "frontend",
+            "imagemUrl": "https://i3.ytimg.com/vi/8-3ZOdp_ZDo/maxresdefault.jpg",
+            "videoUrl": "https://www.youtube.com/watch?v=8-3ZOdp_ZDo",
+            "descricao": "Se você já se aventurou em front end, você sabe que existe uma variedade IMENSA de tecnologias e/ou frameworks disponíveis no mercado hoje, não é mesmo?"
+        },
+        {
+            "id": 5,
+            "titulo": "O que faz uma desenvolvedora Back-end?",
+            "categoria": "backend",
+            "imagemUrl": "https://i3.ytimg.com/vi/fiPfvylj6rk/hqdefault.jpg",
+            "videoUrl": "https://youtu.be/fiPfvylj6rk",
+            "descricao": "Afinal, quem trabalha com Back-end faz o que? Com quais outras áreas da tecnologia essa pessoa acaba se relacionando no dia a dia de trabalho e quais os possíveis caminhos nessa carreira?"
+        },
+        {
+            "id": 6,
+            "titulo": "Github CLI - Uma nova experiência no Github",
+            "categoria": "backend",
+            "imagemUrl": "https://i3.ytimg.com/vi/6o6-bKOZOEY/maxresdefault.jpg",
+            "videoUrl": "https://www.youtube.com/watch?v=6o6-bKOZOEY",
+            "descricao": "Nesse vídeo vamos aprender um pouco mais o que seria o GitHub CLI e quais são as suas vantagens!"
+        },
+        {
+            "id": 7,
+            "titulo": "JpaRepository - Interface boladona do Spring",
+            "categoria": "backend",
+            "imagemUrl": "https://i3.ytimg.com/vi/jh_T5_o3qKE/maxresdefault.jpg",
+            "videoUrl": "https://youtu.be/jh_T5_o3qKE",
+            "descricao": "Intensivão com Spring Boot, neste video falamos sobre o JPA Repository"
+        },
+        {
+            "id": 8,
+            "titulo": "Desmitificando Spring Session",
+            "categoria": "backend",
+            "imagemUrl": "https://i3.ytimg.com/vi/k62bO-W6Sb0/maxresdefault.jpg",
+            "videoUrl": "https://youtu.be/k62bO-W6Sb0",
+            "descricao": "Welcome to 'Demystifying Spring Session: A Comprehensive Introduction for Java Developers!' In this tutorial, we'll explore the powerful features of Spring Session and learn how to effectively manage user sessions in your Java web applications."
+        },
+        {
+            "id": 9,
+            "titulo": "Desenvolvimento Android",
+            "categoria": "mobile",
+            "imagemUrl": "https://i3.ytimg.com/vi/fWscDFHKgw8/maxresdefault.jpg",
+            "videoUrl": "https://youtu.be/fWscDFHKgw8",
+            "descricao": "Um episódio focado no desenvolvimento de aplicações Android. Neste bate-papo, Paulo Silveira e Felipe Torres conversam sobre os primeiros passos para começar a desenvolver, quais as principais ferramentas do desenvolvimento mobile, como colocar sua aplicação no ar e mais!"
+        },
+        {
+            "id": 10,
+            "titulo": "Desenvolvimento IOS pra iniciantes",
+            "categoria": "mobile",
+            "imagemUrl": "https://i3.ytimg.com/vi/MGIs7DSQ-0A/maxresdefault.jpg",
+            "videoUrl": "https://youtu.be/MGIs7DSQ-0A",
+            "descricao": "Por onde começar em iOS? Qual linguagem é importante dominar? Quais ferramentas necessárias para mergulhar no desenvolvimento iOS?"
+        },
+        {
+            "id": 11,
+            "titulo": "Como se tornar um DESENVOLVEDOR MOBILE?",
+            "categoria": "mobile",
+            "imagemUrl": "https://i3.ytimg.com/vi/X-XfVvd41O8/maxresdefault.jpg",
+            "videoUrl": "https://youtu.be/X-XfVvd41O8",
+            "descricao": "Grande parte da experiência de serviços hoje, passa pelo mobile, isso pela praticidade de estarmos o tempo todo conectados. Isso faz com que haja uma demanda crescente por profissionais capacitados para desenvolver essas aplicações."
+        },
+        {
+            "id": 12,
+            "titulo": "Como utilizar o SQLite no React Nativa com Expo",
+            "categoria": "mobile",
+            "imagemUrl": "https://i3.ytimg.com/vi/BJEACwKXWf8/maxresdefault.jpg",
+            "videoUrl": "https://www.youtube.com/watch?v=BJEACwKXWf8",
+            "descricao": "Neste vídeo você irá ver na prática como utilizar o SQLite no React Native com Expo."
+        }
+    ]
+}
